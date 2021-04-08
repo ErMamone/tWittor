@@ -1,1 +1,10 @@
 mongodb+srv://<username>:<password>@twitternigo.lyze2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority
+
+
+Para el funcionamiento de la app y agregar nuevas funcionalidades se debe crear el mod e instalar el main
+
+
+go mod init #Ruta
+go mod tidy
+
+con esos comandos creamos el archivo y se lo exportamos a nuestro main sin problemas
