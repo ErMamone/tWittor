@@ -1,20 +1,20 @@
 package handlers
 
 import (
+	"github.com/ErMamone/tWittor/middlew"
+	"github.com/ErMamone/tWittor/routers"
 	"github.com/gorilla/mux"
 	"github.com/rs/cors"
 	"log"
 	"net/http"
 	"os"
-	"github.com/ErMamone/tWittor/routers"
-	"github.com/ErMamone/tWittor/middlew"
 )
 
 /*Handlers seteo de puerto y escucha del servidor*/
 func Handlers() {
 	router := mux.NewRouter()
 
-	router.HandleFunc("/registro", middlew.CheckingDB(routers.Registro)).Methods("POST")
+	router.HandleFunc("/registro", middlew.CheckingDB(routers.SignUp)).Methods("POST")
 
 	PORT := os.Getenv("PORT")
 
