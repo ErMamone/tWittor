@@ -9,7 +9,7 @@ import (
 
 /*SignUp is for a new user register  */
 func SignUp(w http.ResponseWriter, r *http.Request){
-	var t models.Usuario
+	var t models.User
 	err := json.NewDecoder(r.Body).Decode(&t)
 
 	if err != nil {
