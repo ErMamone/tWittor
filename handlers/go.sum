@@ -1,9 +1,6 @@
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
+github.com/ErMamone/tWittor/bd v0.0.0-20210608194543-7b5195e1aeb0 h1:97ttXOChLxL0wg/j3gFM9F5sHWou5gDJ9St1Wg2chL4=
 github.com/ErMamone/tWittor/bd v0.0.0-20210608194543-7b5195e1aeb0/go.mod h1:F2z5R6Ni2FPCoABvNAaGkV5zuEWTHjduOba76/EYloY=
-github.com/ErMamone/tWittor/bd v0.0.0-20210608210914-b2b7d59ab33f h1:ZJMtgOQlXohOjcZo6PnXLf+5Xy5GZSWUryivJo7euA4=
-github.com/ErMamone/tWittor/bd v0.0.0-20210608210914-b2b7d59ab33f/go.mod h1:fxcuErGjX0hegOWSR/z1TqLYygnENBJiOTOlPPT4fbE=
-github.com/ErMamone/tWittor/handlers v0.0.0-20210608210914-b2b7d59ab33f h1:z35elj/cAsr6iMYdarjQqaZ6c0EuG8nWz/e3OjwilTE=
-github.com/ErMamone/tWittor/handlers v0.0.0-20210608210914-b2b7d59ab33f/go.mod h1:ATwYHzbzrjtMFlRydoF32KAxBFLg/mCbqmi9aatCe8U=
 github.com/ErMamone/tWittor/middlew v0.0.0-20210608210914-b2b7d59ab33f h1:WK9BOAkUhe1sFrSfQVTRT/L/oha0M4anVzbW311YW6g=
 github.com/ErMamone/tWittor/middlew v0.0.0-20210608210914-b2b7d59ab33f/go.mod h1:4AzaG/XijiilAgK3oxViX1jS3WoJfv4uR+DP0kqiTa0=
 github.com/ErMamone/tWittor/models v0.0.0-20210608201005-92705021da83 h1:2wHXoKNqKNz5Cbb7nySjd9nwK0L7vdYU3yqjP9LPlts=
