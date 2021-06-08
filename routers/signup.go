@@ -27,13 +27,13 @@ func SignUp(w http.ResponseWriter, r *http.Request){
 		return
 	}
 
-	_, encontrado, _ := bd.CheckingIfUserExists(t.Email)
+	/*_, encontrado, _ := bd.CheckingIfUserExists(t.Email)
 
 	if encontrado {
 		http.Error(w, "This email is alredy used ", 400)
 		return
 	}
-
+	*/
 	_, status, err := bd.InsertNewUser(t)
 	if err != nil {
 		http.Error(w, "Error persisting "+err.Error(), 400)
