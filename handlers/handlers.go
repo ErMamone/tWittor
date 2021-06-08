@@ -6,11 +6,15 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"github.com/ErMamone/tWittor/routers"
+	"github.com/ErMamone/tWittor/middlew"
 )
 
 /*Handlers seteo de puerto y escucha del servidor*/
 func Handlers() {
 	router := mux.NewRouter()
+
+	router.HandleFunc("/registro", middlew.CheckingDB(routers.Registro)).Methods("POST")
 
 	PORT := os.Getenv("PORT")
 
