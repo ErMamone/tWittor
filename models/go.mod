@@ -1,4 +1,4 @@
-module usuario.go
+module github.com/ErMamone/tWittor/models
 
 go 1.16
 

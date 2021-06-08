@@ -2,12 +2,12 @@ package bd
 
 import (
 	"context"
-	"github.com/ErMamone/tWittor/models"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"time"
+	"github.com/ErMamone/tWittor/models"
 )
 /*InsertNewUser function for insert in DB a new user*/
-func InsertNewUser(u models.Usuario) (string, bool, error){
+func InsertNewUser(u models.User) (string, bool, error){
 
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 
