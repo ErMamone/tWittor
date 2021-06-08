@@ -2,9 +2,9 @@ package bd
 
 import (
 	"context"
+	"github.com/ErMamone/tWittor/models"
 	"go.mongodb.org/mongo-driver/bson/primitive"
 	"time"
-	"github.com/ErMamone/tWittor/models"
 )
 /*InsertNewUser function for insert in DB a new user*/
 func InsertNewUser(u models.User) (string, bool, error){
@@ -16,7 +16,7 @@ func InsertNewUser(u models.User) (string, bool, error){
 	db := MongoCn.Database("twittor")
 	col := db.Collection("usuarios")
 
-	u.Password, _= EncryptPassword(u.Password)
+	//u.Password, _= EncryptPassword(u.Password)
 
 	result, err := col.InsertOne(ctx, u)
 	if err != nil {
@@ -26,4 +26,5 @@ func InsertNewUser(u models.User) (string, bool, error){
 	ObjID, _ := result.InsertedID.(primitive.ObjectID)
 
 	return ObjID.String(), true, nil
+
 }
