@@ -2,12 +2,14 @@ package bd
 
 import (
 	"context"
+	"time"
+
 	"github.com/ErMamone/tWittor/models"
 	"go.mongodb.org/mongo-driver/bson/primitive"
-	"time"
 )
+
 /*InsertNewUser function for insert in DB a new user*/
-func InsertNewUser(u models.User) (string, bool, error){
+func InsertNewUser(u models.User) (string, bool, error) {
 
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 
@@ -16,7 +18,7 @@ func InsertNewUser(u models.User) (string, bool, error){
 	db := MongoCn.Database("twittor")
 	col := db.Collection("usuarios")
 
-	//u.Password, _= EncryptPassword(u.Password)
+	u.Password, _ = EncryptPassword(u.Password)
 
 	result, err := col.InsertOne(ctx, u)
 	if err != nil {

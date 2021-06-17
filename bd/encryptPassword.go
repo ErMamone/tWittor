@@ -2,9 +2,9 @@ package bd
 
 import "golang.org/x/crypto/bcrypt"
 
-/*EncryptPassword */
+/*EncryptPassword just for encrypt pwd :)*/
 func EncryptPassword(pass string) (string, error) {
-	costo := 8
+	costo := 8 //2 elevado al costo
 
 	bytes, err := bcrypt.GenerateFromPassword([]byte(pass), costo)
 
