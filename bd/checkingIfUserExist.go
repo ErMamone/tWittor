@@ -5,7 +5,6 @@ import (
 	"time"
 
 	"github.com/ErMamone/tWittor/models"
-	"github.com/ErMamone/tWtittor/models"
 	"go.mongodb.org/mongo-driver/bson"
 )
 
