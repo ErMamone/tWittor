@@ -2,13 +2,14 @@ package routers
 
 import (
 	"encoding/json"
+	"net/http"
+
 	"github.com/ErMamone/tWittor/bd"
 	"github.com/ErMamone/tWittor/models"
-	"net/http"
 )
 
 /*SignUp is for a new user register  */
-func SignUp(w http.ResponseWriter, r *http.Request){
+func SignUp(w http.ResponseWriter, r *http.Request) {
 	var t models.User
 	err := json.NewDecoder(r.Body).Decode(&t)
 
@@ -27,13 +28,13 @@ func SignUp(w http.ResponseWriter, r *http.Request){
 		return
 	}
 
-	/*_, encontrado, _ := bd.CheckingIfUserExists(t.Email)
+	_, encontrado, _ := bd.CheckingIfUserExist(t.Email)
 
 	if encontrado {
 		http.Error(w, "This email is alredy used ", 400)
 		return
 	}
-	*/
+
 	_, status, err := bd.InsertNewUser(t)
 	if err != nil {
 		http.Error(w, "Error persisting "+err.Error(), 400)
