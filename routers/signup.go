@@ -30,7 +30,7 @@ func SignUp(w http.ResponseWriter, r *http.Request) {
 
 	_, encontrado, _ := bd.CheckingIfUserExist(t.Email)
 
-	if encontrado {
+	if encontrado == true {
 		http.Error(w, "This email is alredy used ", 400)
 		return
 	}

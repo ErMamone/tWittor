@@ -2,6 +2,7 @@ package bd
 
 import (
 	"context"
+	"log"
 	"time"
 
 	"github.com/ErMamone/tWittor/models"
@@ -13,7 +14,7 @@ func CheckingIfUserExist(email string) (models.User, bool, string) {
 	ctx, cancel := context.WithTimeout(context.Background(), 15*time.Second)
 	defer cancel()
 
-	db := MongoCn.Database("tWittor")
+	db := MongoCn.Database("twittor")
 
 	col := db.Collection("users")
 
@@ -25,8 +26,10 @@ func CheckingIfUserExist(email string) (models.User, bool, string) {
 	ID := result.ID.Hex()
 
 	if err != nil {
+		log.Printf("Usuario Creado! -" + ID)
 		return result, false, ID
 	}
 
+	log.Printf("Usuario encontrado -" + ID)
 	return result, true, ID
 }
