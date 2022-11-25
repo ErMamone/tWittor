@@ -11,7 +11,7 @@ import (
 )
 
 /* findProfile busca un perfil en la base*/
-func findProfile(ID string) (models.User, error){
+func FindProfile(ID string) (models.User, error){
 	ctx, cancel := context.WithTimeout(context.Background(), time.Second*15)
 	defer cancel()
 
