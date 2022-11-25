@@ -4,8 +4,6 @@ import (
 	"errors"
 	"strings"
 
-	"github.com/ErMamone/bd"
-	"github.com/ErMamone/models"
 	"github.com/ErMamone/tWittor/bd"
 	"github.com/ErMamone/tWittor/models"
 	jwt "github.com/dgrijalva/jwt-go"
