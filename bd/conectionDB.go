@@ -9,7 +9,8 @@ import (
 
 /*MongoCn variable objeto de conexion para la base de datos*/
 var MongoCn=dbConnect()
-var clientOptions= options.Client().ApplyURI("mongodb+srv://tuvieja:tuvieja123@twitternigo.lyze2.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+var clientOptions= options.Client().ApplyURI("mongodb+srv://tuvieja123:tuvieja123@twitternigo.lyze2.mongodb.net/?retryWrites=true&w=majority")
+
 
 /*dbConnect es la funcion para conectarse a la base de datos*/
 func dbConnect() *mongo.Client {
